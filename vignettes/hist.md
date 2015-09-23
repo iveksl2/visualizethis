@@ -17,7 +17,8 @@ One can call the graphics `hist` function on a numeric vector or numeric column 
 
 ![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1.png) 
 
-sweet, but what about a dataframe?  Lets take a look at the head of the `mtcars` dataframe
+Great! Simple graphs that yield insight are beautiful. 
+What about on a dataframe?  Lets take a look at the head of the `mtcars` dataframe
 
 |                  |  mpg| cyl|  disp|  hp| drat|    wt|  qsec| vs| am| gear| carb|
 |:-----------------|----:|---:|-----:|---:|----:|-----:|-----:|--:|--:|----:|----:|
@@ -36,8 +37,7 @@ sweet, but what about a dataframe?  Lets take a look at the head of the `mtcars`
 ```r
   hist(mtcars)
 ```
-##### Error: 'x' must be numeric
-
+##### Error: 'x' must be numeric   
 :(
 
 but wait! now with the `visualizethis` package one can just pass a dataframe and plot the histograms for all the variables. 
@@ -51,4 +51,5 @@ Factors will plot barcharts by default
 ```
 
 ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
+
 

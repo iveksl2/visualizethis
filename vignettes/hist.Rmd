@@ -37,3 +37,4 @@ Factors will plot barcharts by default
   hist(mtcars)
 ```
 
+
