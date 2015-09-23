@@ -6,7 +6,6 @@
 #'  hist(mtcars)
 #'  hist(iris)
 #' }
-#' @export 
 hist.data.frame <- function(df, mfrows = 4, mfcols = 4, ...) {
   par(mfrow = c(mfrows, mfcols)) # TODO: feels ugly here
   graphs_per_pane <- mfrows * mfcols
@@ -15,7 +14,7 @@ hist.data.frame <- function(df, mfrows = 4, mfcols = 4, ...) {
     col <- df[, i]
     if (is(col, 'numeric')) 
       hist(col, main = col_name, ...)
-    else if (is(col, 'factor'))  
+    else if(is(col, 'factor'))  
       barplot(table(col), main = col_name, ...) 
     else 
       message(col_name, 'will be skipped as a character type') 
