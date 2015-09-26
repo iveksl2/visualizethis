@@ -9,7 +9,7 @@
 hist.data.frame <- function(df, mfrows = 4, mfcols = 4, ...) {
   par(mfrow = c(mfrows, mfcols)) # TODO: feels ugly here
   graphs_per_pane <- mfrows * mfcols
-  for(i in seq_len(min(graphs_per_pane, NCOL(df)))) {
+  for(i in seq_len(NCOL(df))) {
     col_name <- colnames(df)[i]
     col <- df[, i]
     if (is(col, 'numeric')) 
